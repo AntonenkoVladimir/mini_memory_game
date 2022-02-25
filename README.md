@@ -7,9 +7,6 @@ The project includes three pages:
 * The end game page with the result and the ability to return to 
 the first page to start a new game.
 
-Extras:
-To start the game, select username on the first page and create your scoreboard using these procedures on the last page.
-
 ## Stack:
 * ReactJS
 * Redux
