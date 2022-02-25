@@ -1,0 +1,34 @@
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+  height: 500px;
+  background: #5CDB95;
+  border-radius: 30px;
+  border: 10px double #05386B;
+  h1 {
+    font-size: 60px;
+    margin: 0;
+    text-shadow: 0 3px rgba(red, 0.5);
+  }
+  p {
+    font-size: 50px;
+    margin: 0;
+  }
+  button {
+    width: 250px;
+    height: 50px;
+    background: #379683;
+    font-size: 30px;
+    color: #EDF5E1;
+    border: 5px solid #05386B;
+    border-radius: 15px;
+    text-shadow: 0 4px black;
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
+}

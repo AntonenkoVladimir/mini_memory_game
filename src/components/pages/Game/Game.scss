@@ -1,0 +1,122 @@
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+  background: #379683;
+  .game-score {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #379683;
+    background: #5CDB95;
+    .game-score-header {
+      height: 50px;
+      width: 300px;
+      h1 {
+        font-size: 35px;
+        margin: 0;
+        padding-left: 5px;
+        border-bottom: 5px solid #379683;
+      }
+    }
+    p {
+      display: flex;
+      align-items: center;
+      height: 250px;
+      font-size: 100px;
+      margin: 0;
+    }
+  }
+  .game-predict {
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #379683;
+    background: #5CDB95;
+    .game-predict-header {
+      height: 50px;
+      width: 300px;
+      h1 {
+        font-size: 35px;
+        margin: 0;
+        padding-left: 5px;
+        border-bottom: 5px solid #379683;
+      }
+    }
+    p {
+      display: flex;
+      align-items: center;
+      height: 250px;
+      font-size: 200px;
+      margin: 0;
+    }
+  }
+  .game-card {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    box-sizing: border-box;
+    background: #EDF5E1;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    perspective: 1000px;
+    &:hover{
+      box-shadow: 0 0 8px 6px rgba(#5CDB95, 0.8);
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(0.95);
+      transition: transform .2s;
+    }
+    .game-card-value,
+    .game-card-back{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 130px;
+      height: 130px;
+      border: 2px solid #05386B;
+      box-sizing: border-box;
+      background: #EDF5E1;
+      font-size: 100px;
+      backface-visibility: hidden;
+    }
+    .game-card-value {
+      transform: rotateY(180deg);
+    }
+  }
+  .game-card.flip {
+    transform: rotateY(180deg);
+  }
+  .game-card-true {
+    color: green;
+  }
+  .game-card-false {
+    color: red;
+  }
+  .game-hover-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+}
