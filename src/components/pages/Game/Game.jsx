@@ -18,7 +18,7 @@ const Game = () => {
   const dispatch = useDispatch();
   const score = useSelector(store => store["currentScore"]);
 
-  const numbers= useMemo(() => newNumbers(), [params.lvl]);
+  const numbers = useMemo(() => newNumbers(), [params.lvl]);
   const [chosen, setChosen] = useState([]);
   const [predict, setPredict] = useState(null);
   const [predictCount, setPredictCount] = useState(null);
@@ -41,7 +41,7 @@ const Game = () => {
         }
       } else {
         setToLose(toLose - 1);
-        if (!!!(toLose - 1)) {
+        if (!(toLose - 1)) {
           setTimeout(() => {
             navigate(`/end/${params.user}`);
           }, 500);
