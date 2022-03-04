@@ -1,6 +1,6 @@
+import {useMemo} from "react";
 import {useSelector} from "react-redux";
 import "./BestScore.scss";
-import {useMemo} from "react";
 
 const BestScores = ({setIsBest}) => {
   const users = useSelector(store => store["usersList"]);
